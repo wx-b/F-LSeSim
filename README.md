@@ -1,7 +1,7 @@
 
 # Spatially-Correlative Loss
 
-[arXiv](https://arxiv.org/abs/2104.00854) | [website]()
+[arXiv](https://arxiv.org/abs/2104.00854) | [website](http://www.chuanxiaz.com/publication/flsesim/)
 <br>
 
 <img src='imgs/FSeSim-frame.gif' align="center">
@@ -14,6 +14,9 @@ We provide the Pytorch implementation of "The Spatially-Correlative Loss for Var
 NTU and Monash University <br>
 In CVPR2021 <br>
 
+## ToDo
+- a simple example to use the proposed loss
+
 ## Example Results
 
 ### Unpaired Image-to-Image Translation
@@ -24,7 +27,7 @@ In CVPR2021 <br>
 
 <img src='imgs/single-translation.gif' align="center">
 
-### [More results on project page]()
+### [More results on project page](http://www.chuanxiaz.com/publication/flsesim/)
 
 ## Getting Started
 
@@ -58,7 +61,7 @@ sh ./scripts/train_sc.sh
 - Set ```--use_norm``` for cosine similarity map, the default similarity is dot-based attention score. ```--learned_attn, --augment``` for the learned self-similarity.
 - To view training results and loss plots, run ```python -m visdom.server``` and copy the URL [http://localhost:port](http://localhost:port).
 - Training models will be saved under the **checkpoints** folder.
-- The more training options can be found in **options** folder.
+- The more training options can be found in the **options** folder.
 <br><br>
 
 
@@ -68,7 +71,7 @@ sh ./scripts/train_sc.sh
 sh ./scripts/train_sinsc.sh 
 ```
 
-As *multi-modal* I2I translation model was trained on [MUNIT](https://github.com/NVlabs/MUNIT), we would not plan to merge the code to this repository. If you wish to obtain multi-modal results, please contact us at chuanxia001@e.ntu.edu.sg.
+As the *multi-modal* I2I translation model was trained on [MUNIT](https://github.com/NVlabs/MUNIT), we would not plan to merge the code to this repository. If you wish to obtain multi-modal results, please contact us at chuanxia001@e.ntu.edu.sg.
 
 ### Testing
 
@@ -94,9 +97,12 @@ sh ./scripts/test_fid.sh
 
 Download the pre-trained models (will be released soon) using the following links and put them under```checkpoints/``` directory.
 
+- ```Single-modal translation model```: [horse2zebra](https://drive.google.com/drive/folders/1k8Y5R6CnaDwfkha_lD5_yQTvoajoU6GR?usp=sharing), [semantic2image](https://drive.google.com/drive/folders/1xnF6wLTPhD35-2It8IIomJRhFZdr2qXp?usp=sharing), [apple2orange](https://drive.google.com/drive/folders/1Z9PwxkWlakDdv12Jha6WJRgO6cSfEZGs?usp=sharing)
+- ```Single-image translation model```: [image2monet](https://drive.google.com/drive/folders/1QcGY9H0USWHJtcifRMWh_KHOJszME6-U?usp=sharing)
+
 ## Citation
 ```
-@inproceedings{zheng2019pluralistic,
+@inproceedings{zheng2021spatiallycorrelative,
   title={The Spatially-Correlative Loss for Various Image Translation Tasks},
   author={Zheng, Chuanxia and Cham, Tat-Jen and Cai, Jianfei},
   booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
